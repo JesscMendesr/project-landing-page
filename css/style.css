@@ -1,0 +1,288 @@
+/* GLOBAR */
+
+*,
+::after,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* HEADER */
+
+#header-img {
+  min-width: 100px;
+}
+
+.image-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 950px;
+  object-fit: cover;
+}
+
+.image-mountains {
+  position: absolute;
+  width: 100%;
+  height: 1120px;
+  top: -160px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#header-img {
+  padding-top: 40px;
+}
+
+header {
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-top: 40px;
+  flex-wrap: wrap;
+  font-size: 1.25em;
+}
+
+.nav-link {
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  padding: 10px 20px;
+  background: #46aef7;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+
+/* HEADER - RESPOSIVO - MOBILE */
+
+@media only screen and (max-width: 800px) {
+  header {
+    align-items: flex-end;
+  }
+  header ul {
+    gap: 10px;
+    font-size: 1em;
+    padding-top: 20px;
+  }
+  #header-img {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-link {
+    background: #46aef7;
+    border-radius: 50px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .nav-link:hover {
+    border: 1px solid white;
+    padding: 8px 12px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* CALL TO ACTION */
+
+.container {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+}
+
+.image-balloon {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  justify-self: end;
+  object-fit: cover;
+  height: 100%;
+}
+
+.title {
+  grid-row: 1;
+  color: white;
+  padding-bottom: 40px;
+}
+
+.subscribe {
+  grid-column: 1;
+  align-self: start;
+  padding-bottom: 80px;
+  color: white;
+  max-width: 100%;
+}
+
+.subscribe h2 {
+  padding-bottom: 40px;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+input {
+  border-radius: 20px;
+  height: 40px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid white;
+  margin-right: 20px;
+}
+
+input::placeholder {
+  padding-left: 10px;
+  font-family: "Quicksand", Sans-serif;
+  font-size: 1em;
+}
+
+button {
+  border-radius: 140px;
+  width: 140px;
+  height: 50px;
+  box-shadow: 12px 4px 29px rgba(75, 76, 76, 0.19);
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+button:hover {
+  background: #46aef7;
+  color: white;
+  border: 1px solid white;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .image-balloon img {
+    display: none;
+  }
+  .title {
+    grid-row: auto;
+    color: white;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+  input {
+    width: 260px;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+.container-feature {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.grid-features {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.fas,
+.far {
+  font-size: 3em;
+  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 38.54%, #46aef7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#features .icon {
+  display: flex;
+  height: 125px;
+  width: 160px;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+.conteudo p {
+  font-size: 1.25em;
+}
