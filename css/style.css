@@ -208,7 +208,7 @@ input::placeholder {
 .btn.fundo-branco {
   background-color: #46aef7;
   color: white;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 
 button:hover {
@@ -260,15 +260,13 @@ button:hover {
 .container-feature {
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 300px;
-  padding-bottom: 100px;
+  padding: 300px 20px 100px;
 }
 
 .grid-features {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 auto;
 }
 
 .fas,
@@ -282,7 +280,8 @@ button:hover {
 #features .icon {
   display: flex;
   height: 125px;
-  width: 160px;
+  width: 100%;
+  max-width: 100px;
   align-items: center;
   justify-content: center;
 }
@@ -295,10 +294,51 @@ h3 {
   font-size: 1.25em;
 }
 
+/* FEATURES - RESPONSIVO */
+
+@media (max-width: 800px) {
+  h3 {
+    font-size: 1.75em;
+  }
+  .conteudo p {
+    font-size: 1.12em;
+  }
+  .container-feature {
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  h3 {
+    font-size: 1.5em;
+  }
+  .conteudo p {
+    font-size: 1em;
+  }
+  .container-feature {
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+}
+
 iframe {
+  margin-bottom: 40px;
   margin-top: 80px;
   max-width: 900px;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  iframe {
+    margin-top: 20px;
+  }
 }
 
 .bg-pacotes {
@@ -323,6 +363,7 @@ iframe {
   padding: 200px 0;
   justify-content: center;
   gap: 30px;
+  position: relative;
 }
 
 .pacote {
@@ -357,4 +398,59 @@ p[class="preco-cheio"] {
 
 .valor-parcela span {
   font-weight: 900;
+}
+
+.valor-parcela {
+  margin-top: 0;
+}
+
+.fas.fa-plus-circle {
+  font-size: 4em;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* RESPONSIVO - PACOTES */
+
+@media (max-width: 800px) {
+  .container-grid {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-grid {
+    flex-wrap: wrap;
+    padding: 80px 0;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #46aef7;
+  padding: 80px 60px;
+  font-size: 1.12em;
+  color: white;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+footer a {
+  color: white;
+}
+
+footer span {
+  padding-top: 60px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column-reverse;
+  }
 }
